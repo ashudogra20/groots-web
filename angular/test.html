@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app = 'demoApp'>
+<head>
+	<title>
+		Testing Angular
+	</title>
+</head>
+<body>
+	<!-- Name
+	<br/>
+	<input type ="text" ng-model = "name"/>{{name}}
+	<br/>
+	<div ng-controller="SimpleController">
+		<ul>
+			<li ng-repeat = "cust in customers|filter:name|orderBy:'-name'">{{cust.name}} - {{ cust.city}}</li>
+		</ul>
+	</div>
+	<div ng-controller="CustomController">
+		<ul>
+			<li ng-repeat = "cust in customers|filter:name|orderBy:'-name'">{{cust.name}} - {{ cust.city}}</li>
+		</ul>
+	</div> -->
+	
+	<script src = "angular.min.js"></script>
+	<script>
+		var demoApp = angular.module('demoApp',['ngRoute']);
+		demoApp.config(function($routeProvider) {
+			$routeProvider
+				.when('/',{
+					controller: 'SimpleController',
+					templateUrl: 'view1.html'
+				})
+				.when('/custom', {
+					controller: 'CustomController',
+					templateUrl: 'view2.html'
+				})
+				.oherwise({redirectTo:'/'});
+		});
+		var controllers = {};
+		controllers.SimpleController = function($scope){
+			$scope.customers = [
+			{name:'Ziddi',city:'Njf'},
+			{name:'Naveen',city:'Njf'},
+			{name:'Ujjwal',city:'Njf'},
+			{name:'Naeem',city:'Njf'},
+			{name:'abc',city:'Njf'}
+			];
+			$scope.addCustomer = function($scope){
+				$scope.customers.push({name:$scope.newCustomer.name, city:$scope.newCustomer.city});
+			}
+		};
+		controllers.CustomController = function($scope){
+			$scope.customers = [
+			{name:'Ziddi1',city:'Njf'},
+			{name:'Naveen1',city:'Njf'},
+			{name:'Ujjwal1',city:'Njf'},
+			{name:'Naeem1',city:'Njf'},
+			{name:'abc1',city:'Njf'}
+			];
+		};
+		demoApp.controller(controllers);
+	</script>
+</body>
+</html>

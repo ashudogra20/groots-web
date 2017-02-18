@@ -1,0 +1,209 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    body{
+        overflow-x:hidden;
+    }
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    height: 100%;
+    padding-top: 0px;
+    text-align: center;
+    /*background: #fff url('../images/slider5.jpg') center center fixed;
+    background-size: cover;*/
+}
+.seller-section{
+    min-height: 400px;
+    padding-top: 100px;
+    text-align: left;
+    background: #fff;
+    
+}
+.registration-form{
+    background: #f2f2f2;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+@media (min-width: 991px){
+    .seller-text{
+        font-size: 40px;
+        color: #C9302C;
+        padding-top: 0px;
+    }
+}
+
+.how-it-works-section {
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.how-it-works-section p{
+    padding-top: 15px;
+    font-size: 17px;
+    font-weight: 200;
+}
+.how-it-works-section h4{
+    font-size: 20px;
+    font-weight: 400;
+    color:#F67936;
+}
+
+
+@media (max-width: 771px){
+.how-it-works-section {
+    height: auto;
+    padding-top: 50px;
+    text-align: center;
+    background: #f9f9f9;
+}
+}
+.about-section {
+    height: 100%;
+    padding-top: 70px;
+    text-align: center;
+    background: #fff;
+}
+.about-section p{
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.services-section {
+    height: 100%;
+    padding-top: 70px;
+    text-align: center;
+    background: #fff url('../images/background-veggies.png') repeat center center fixed;
+    /*background: #fff;*/
+}
+
+.services-section img, .steps-section img{
+    margin: 0 auto;
+}
+.services-section h1{
+    color: #000;
+}
+.steps-section {
+    height: auto;
+    padding-top: 80px;
+    text-align: center;
+    background-size: cover;
+    background: #fff;
+}
+.steps-section p{
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.steps-number {
+    display: inline-block;
+    color: #fff;
+    background: #F8BB13;
+    border-radius: 50%;
+    height: 70px;
+    padding: 22px;
+    vertical-align: middle;
+    width: 70px;
+}
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: right;
+    background: #f9f9f9 url('../images/contact-us.jpg') center center fixed;
+    background-size: cover;
+
+}
+.contact-section a, .contact-section a:hover{
+    color: #337ab7;
+}
+.welcome-section{
+    padding-top: 150px;
+    height: calc(100% - 50px);
+}
+.welcome-text{
+        font-size: 30px;
+        color: #C9302C;
+        padding-top: 0px;
+        text-align: center;
+}
+.why-choose-us-section{
+    height: 80%;
+    padding:100px 0 40px 0;
+    background: #f2f2f2 url('../images/background-veggies.png') center center fixed;
+
+}
+.why-choose-us-section h1{
+    text-align: center;
+}
+@media (max-width: 761px){
+    .contact-section {
+    height: auto;
+    padding-top: 50px;
+    text-align: center;
+}
+.about-section {
+    height: auto;
+    padding-top: 50px;
+}
+.services-section {
+    height: auto;
+    padding-top: 50px;
+}
+}
+@media (max-width: 991px){
+.steps-number{
+    display: block;
+    margin: 0 auto;
+}
+
+}
+
+@media (min-width: 1130px){
+    .about-section p:first-child{
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 45px;
+}
+}
+
+
+@media (max-width: 1024px){
+.about-section, .services-section, .how-it-works-section, .why-choose-us-section{
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+}

@@ -1,0 +1,19 @@
+<div class="container">
+	<h2>Name:</h2>
+	<br/>
+	<input type="text" ng-model "filter.name">
+	<br/>
+	<ul>
+		<li ng-repeat="cust in customers | filer:filer.name">
+			{{cust.name}} - {{cust.city}}
+		</li>
+	</ul>
+	<br/>
+	<h2>New Customer Name</h2>
+	<br/>
+	<input type="text" ng-model = "newCustomer.name">
+	<h2>New Customer City</h2>
+	<br/>
+	<input type="text" ng-model = "newCustomer.city">
+	<button ng-click="addNewCustomer()">Add Customer</button>
+</div>
